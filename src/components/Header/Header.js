@@ -7,7 +7,7 @@ class Header extends Component {
 
   //value取得 event handler
   onInputChangeHandler = (event) => {
-    this.setState({keyword: event.target.value})
+    // this.setState({keyword: event.target.value})
   }
 
   render(){
