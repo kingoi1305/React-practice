@@ -6,7 +6,7 @@ import Body from './components/Body/Body';
 import List from './components/Video/List/List';
 import Video from './components/Video/Video';
 
-const YOUTUBE_API_KEY = 'AIzaSyAOIsfVLvIyzcYHhgLWe2NPSrwjS_99L1s'
+const YOUTUBE_API_KEY = 'AIzaSyDBUeh6T6T4vsOJiJd3WH4_gw8agXEZS3c'
 
 class App extends Component {
 
