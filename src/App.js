@@ -16,7 +16,7 @@ class App extends Component {
 
   componentDidMount(){
     YSearch({ key: YOUTUBE_API_KEY, term: 'soccer'}, (data) => {
-      this.setState({videos: data, selectedVideo: data[2]})
+      this.setState({videos: data, selectedVideo: data[0]})
     });
   }
 
@@ -24,11 +24,21 @@ class App extends Component {
     this.setState({ selectedVideo: video })
   }
 
+  onKeywordChangedHandler = (keyword) => {
+    let newTerm = 'soccer' + keyword;
+    if(keyword === ''){
+      newTerm = 'soccer';
+    }
+    
+    YSearch({ key: YOUTUBE_API_KEY, term: newTerm}, (data) => {
+     this.setState({ videos: data, selectedVideo: data[0]})
+  });
+  }
+
   render() {
     return(
       <div className="App">
-        <Header />
-
+        <Header onKeywordChanged={this.onKeywordChangedHandler}/>
         <Body>
           <Video video={this.state.selectedVideo} />
           <List 

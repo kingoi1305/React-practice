@@ -15,7 +15,7 @@ const Video = (props) => {
   return (
     <div className="video col-xl-8">
       <div className="ratio ratio-16x9">
-      <iframe className="ratio > *" src={videoURL}></iframe>
+      <iframe className="ratio > *" src={videoURL} frameBorder={0} allowFullScreen></iframe>
       </div>
       <div className="info">           
         <h2>{props.video.snippet.title}</h2>
